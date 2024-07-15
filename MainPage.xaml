@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    x:Class="MauiCollectionViewIssue.MainPage"
+    Title="CollectionViewIssue">
+
+    <CollectionView>
+
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout
+                Orientation="Vertical"
+                Span="3"
+                HorizontalItemSpacing="5"
+                VerticalItemSpacing="5" />
+        </CollectionView.ItemsLayout>
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="system:Int32">
+                <Label
+                    Text="{Binding}"
+                    BackgroundColor="Red"
+                    HeightRequest="50"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"/>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+
+        <CollectionView.ItemsSource>
+            <x:Array Type="{x:Type system:Int32}">
+                <system:Int32>0</system:Int32>
+                <system:Int32>1</system:Int32>
+                <system:Int32>2</system:Int32>
+                <system:Int32>3</system:Int32>
+                <system:Int32>4</system:Int32>
+                <system:Int32>5</system:Int32>
+                <system:Int32>6</system:Int32>
+                <system:Int32>7</system:Int32>
+                <system:Int32>8</system:Int32>
+                <system:Int32>9</system:Int32>
+            </x:Array>
+        </CollectionView.ItemsSource>
+
+    </CollectionView>
+</ContentPage>
